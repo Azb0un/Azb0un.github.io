@@ -1,0 +1,462 @@
+/*FONTS*/
+@font-face {
+    font-family: "BaiJamjuree";
+    src: url(../fonts/BaiJamjuree-Regular.ttf);
+    font-display: swap;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/*RESETS*/
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-family: "BaiJamjuree", sans-serif;
+}
+
+
+/*BACKGROUND IMAGE*/
+body {
+    background-color: rgb(6, 7, 12);
+    background-image: url(../img/backgrounds/bg-home.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 0 10%;
+}
+
+/*not home body*/
+.nothome {
+    background-image: url(../img/backgrounds/bg-pages.webp);
+}
+
+/*HEADER*/
+header,
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.nav-item {
+    font-size: 1.5rem;
+    margin-left: 60px;
+    transition: 0.2s;
+}
+
+.active {
+    color: #3FA2F6;
+}
+
+.nav-item:hover {
+    color: #3FA2F6;
+    transform: scale(1.2);
+}
+
+.nav-item:active {
+    transform: scale(1.1);
+}
+
+/*Container*/
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*LEFT*/
+.left-container {
+    display: flex;
+    align-items: center;
+    padding-top: 10%;
+    z-index: 1;
+}
+
+.left-container h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    padding: 25px 0px;
+}
+
+#my-name {
+    font-size: 6rem;
+}
+
+.left-container h3 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #3FA2F6;
+    padding-bottom: 40px;
+}
+
+.left-container p {
+    font-size: 1.2rem;
+    color: lightgrey;
+    line-height: 1.5;
+    padding-bottom: 50px;
+}
+
+/*buttons*/
+.buttons a {
+    display: inline-block;
+    box-sizing: border-box;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 13px 0;
+    width: 200px;
+    border: 2px solid #3FA2F6;
+    border-radius: 8px;
+    margin-right: 50px;
+    background-color: #3FA2F6;
+    margin-bottom: 130px;
+    transition: 0.2s;
+}
+
+.buttons a:hover {
+    background-color: transparent;
+    color: #3FA2F6;
+    transform: scale(1.3);
+}
+
+/*ICONS*/
+.social-icon {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 50px;
+}
+
+.social-icon img {
+    background-color: #3FA2F6;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #3FA2F6;
+    border-radius: 50%;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #3FA2F6;
+}
+
+/* Apply Animations */
+.header-homepage {
+    animation: fadeInTop 1s ease-in backwards;
+}
+
+.whoami {
+    animation: fadeIn 1.2s ease-out backwards;
+}
+
+.whatido {
+    animation: fadeIn 1.4s ease-out backwards;
+}
+
+.aboutme {
+    animation: fadeIn 1.6s ease-out backwards;
+}
+
+.contact-me {
+    animation: fadeIn 1.8s ease-out backwards;
+}
+
+.social-icon {
+    animation: fadeIn 2s ease-out backwards;
+}
+
+/* PAGE TITLE (Services + Projects + About + Contact) */
+.page-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.page-title span {
+    color: #3FA2F6;
+}
+
+/* CARDS (Services + Projects) */
+.service,
+.project {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(63, 162, 246, 0.35);
+    border-radius: 12px;
+    transition: 0.2s;
+    animation: fadeIn 1s ease-out backwards;
+}
+
+.service:hover,
+.project:hover {
+    transform: translateY(-8px);
+    border-color: #3FA2F6;
+    box-shadow: 0 0 20px rgba(63, 162, 246, 0.25);
+}
+
+.service p,
+.project p {
+    color: lightgrey;
+    line-height: 1.5;
+}
+
+/* SERVICES PAGE */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-bottom: 60px;
+}
+
+.service {
+    padding: 30px 24px;
+    animation-duration: 1.4s;
+}
+
+.service h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #3FA2F6;
+}
+
+/* PROJECTS PAGE */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-bottom: 60px;
+}
+
+.project img {
+    width: 100%;
+    height: 400px;
+    object-fit: scale-down;
+}
+
+.project-info {
+    padding: 20px 24px 24px;
+}
+
+.project h3 {
+    font-size: 1.4rem;
+    padding-bottom: 8px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px 0;
+}
+
+.tags span {
+    font-size: 0.85rem;
+    color: #3FA2F6;
+    border: 1px solid #3FA2F6;
+    border-radius: 20px;
+    padding: 3px 12px;
+}
+
+.project-links {
+    display: flex;
+    gap: 16px;
+}
+
+.project-links a {
+    color: #3FA2F6;
+    font-weight: 500;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+/* ABOUT PAGE */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 40px;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.about-img img {
+    width: 100%;
+    height: 450px;
+    object-fit: scale-down;
+    border-radius: 12px;
+    border: 1px solid rgba(63, 162, 246, 0.35);
+    display: block;
+    animation: fadeIn 1s ease-out backwards;
+}
+
+.about-text {
+    animation: fadeIn 1s ease-out backwards;
+}
+
+.about-text h3,
+.contact-info h3 {
+    font-size: 2rem;
+    color: #3FA2F6;
+    padding-bottom: 12px;
+}
+
+.about-text p,
+.contact-info p {
+    color: lightgrey;
+    line-height: 1.7;
+    padding-bottom: 20px;
+}
+
+/* CONTACT PAGE */
+.contact-info {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    padding: 40px 30px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(63, 162, 246, 0.35);
+    border-radius: 12px;
+    animation: fadeIn 1s ease-out backwards;
+}
+
+.contact-info .social-icon {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 0;
+}
+
+.email {
+    color: #3FA2F6;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
+
+/* SMALL SCREENS */
+@media (max-width: 1100px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        padding: 0 6%;
+        background-image: linear-gradient(rgba(6, 7, 12, 0.75), rgba(6, 7, 12, 0.75)), url(../img/backgrounds/bg-home.webp);
+    }
+
+    .nothome {
+        background-image: url(../img/backgrounds/bg-pages.webp);
+    }
+
+    header {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo {
+        font-size: 2.2rem;
+    }
+
+    .nav-item {
+        font-size: 1.1rem;
+        margin: 0 10px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .left-container {
+        padding-top: 40px;
+    }
+
+    .left-container h1 {
+        font-size: 2.2rem;
+    }
+
+    #my-name {
+        font-size: 3.5rem;
+    }
+
+    .left-container h3 {
+        font-size: 1.6rem;
+        padding-bottom: 24px;
+    }
+
+    .left-container p {
+        padding-bottom: 32px;
+    }
+
+    .buttons a {
+        margin-bottom: 40px;
+    }
+
+    .social-icon {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .right-container {
+        display: none;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+        margin: 40px 0;
+    }
+
+    .projects-container,
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project img {
+        height: 250px;
+    }
+
+    .about-img img {
+        height: 350px;
+    }
+}
