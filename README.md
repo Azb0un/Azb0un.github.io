@@ -2,7 +2,7 @@
 
 A responsive personal portfolio website built with HTML and CSS.
 
-**Live site:** https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/
+**Live site:** https://azb0un.github.io/
 
 ## Pages
 
